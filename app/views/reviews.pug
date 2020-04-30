@@ -1,0 +1,48 @@
+extends layout
+
+block content
+
+    .container
+        .row.course-title
+            .col-3
+                h1 #{courseTitle}
+                i
+                    p Faculty of #{faculty}
+
+        .row.course-rating
+            .col-3
+                h5 Overall Rating:
+                h1.rating #{courseRating}
+            
+        
+        .row
+            .col-3.ml-auto
+                h5
+                    a(href='/reviews/add/'+ courseId) Write a Review!
+        hr
+
+        .row
+            .col-3
+                h3 User Reviews
+        
+        each review in reviews
+            .row.reviews
+                .col-3.user-data
+                    br
+                    h4= review.author 
+                    br
+                    h5 Professor:
+                    i
+                        h6= review.professor
+                    br
+                    h5 Rating:
+                    br
+                    h3= review.rating 
+                .col-9
+                    br
+                    h4= review.reviewTitle
+                    hr
+                    
+                    p= review.body
+
+

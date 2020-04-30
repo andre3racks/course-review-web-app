@@ -1,0 +1,38 @@
+extends layout
+
+block content
+
+    .container
+        .row
+            .col-md-8.col-sm-8-xs-12.mx-auto
+                form.form-container(method='POST' action="/reviews/add/"+ courseId)
+                    h1.sign-in.text-center Write a Review 
+                    h1.sign-in.text-center for #{courseTitle}!
+                    .form-group
+                        label Title
+                        input.form-control(name='title' type='text' placeholder='Title' required='' autofocus='')
+                    .form-group
+                        label Professor
+                        input.form-control(name='professor' type='text' placeholder='Professor' required='' autofocus='')
+                    .form-group.mx-auto
+                        label Rating
+                        br
+                        label.radio-inline
+                            span 1
+                            input.form-control.rating_button(name='rating' value='1' type='radio' required='' checked='')
+                        label.radio-inline    
+                            span 2
+                            input.form-control.rating_button(name='rating' value='2' type='radio' required='')
+                        label.radio-inline
+                            span 3
+                            input.form-control.rating_button(name='rating' value='3' type='radio' required='')
+                        label.radio-inline
+                            span 4
+                            input.form-control.rating_button(name='rating' value='4' type='radio' required='')
+                        label.radio-inline
+                            span 5
+                            input.form-control.rating_button(name='rating' value='5' type='radio' required='')
+                    .form-group
+                        label Review
+                        textarea.form-control(name='review' placeholder='Write your review here...' required='' rows='10' cols='50')
+                    button.btn.btn-lg.btn-primary.btn-block(type='submit') Submit!

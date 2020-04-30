@@ -1,0 +1,33 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es5",
+        "noImplicitAny": false,
+        "outDir": "./app/dist",
+        "rootDir": "./app/src",
+        "sourceMap": true,
+        "esModuleInterop": true,
+        "inlineSources": true,
+        "strict": true,
+        "plugins": [
+            {
+                "name": "typescript-tslint-plugin",
+                "configFile": "../tslint.json"
+            }
+        ],
+        "lib": [
+            "dom",
+            "es5",
+            "scripthost",
+            "es2015.promise"
+        ]
+    },
+
+    "include": [
+        "app/src/**/*"
+    ],
+    "exclude": [
+      "./node_modules",
+        "./app/node_modules/"
+    ]
+}

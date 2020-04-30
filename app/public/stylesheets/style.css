@@ -1,0 +1,51 @@
+.form-container{
+  padding: 30px 50px;
+  margin-top: 20vh;
+}
+
+.sign-in{
+  padding: 10px;
+  text-align: center;
+}
+
+input[type=radio] {
+  width: 30px;
+  height: 30px;
+  margin: 0 20px 0 10px;
+}
+.radio-inline{
+  margin: 0 10px 0 10px;
+}
+
+.jumbotron{
+  margin-top: 5vh;
+}
+
+.middle{
+  margin-top: 10vh;
+}
+
+.course-title{
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
+.course-rating{
+  margin-top: 5vh;
+}
+
+.reviews{
+  margin-top: 40px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+}
+
+.rating{
+  margin-top: 10px;
+  margin-left: 40px;
+}
+
+.user-data{
+  word-wrap: break-word;
+}

@@ -1,0 +1,32 @@
+extends layout
+
+block content
+
+    .container
+        .row
+            .col-md-10.col-sm-10.col-xs-12.mx-auto
+                header.jumbotron
+                    .container
+                        h1 Search for a Course to Write a Review
+                        br
+                        form.form-inline(action='/course_search' method='GET')
+                            .form-group
+                                
+                                input.form-control(type='text' name='search' placeholder='Course search...')
+                                input.btn.btn-primary(type='submit' value='Search')
+
+        if !noSearch
+            .container
+                .row
+                    .col-md-8.col-sm-8.col-xs-12.mx-auto
+                        if !noMatch
+                            each course, i in matched_courses
+                                
+                                            a(href='/reviews/'+course._id)
+                                                h4= course.title
+                                            hr
+                                    
+                        else
+                            h4 No Match (Try SENG 350)
+
+        
